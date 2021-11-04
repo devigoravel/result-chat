@@ -497,22 +497,25 @@ body {
 
 @media (max-width: 391px){
     .main {
-        display: block;
+        height: 100vh;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
     }
     .main .map-field {
         height: 65vh;
     }
     .main .map-field.fa {
-        height: 10%;
+        height: 10vh;
         opacity: 0.4;
     }
 
     .main .chat-field {
-        height: 35%;
+        height: 35vh;
     }
     
     .main .chat-field.fade {
-        height: 90%;
+        height: 90vh;
     }
 
     .main .map-field .circle.circle-out {
