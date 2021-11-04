@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <section class="main">
+        <div class="map-field">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1947.0306894540197!2d48.07914326151446!3d46.359125561278155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41a9050f5c8e6fcf%3A0x101f65b0da37ac2c!2z0YPQuy4g0JfQtdC70LXQvdCw0Y8sINCQ0YHRgtGA0LDRhdCw0L3RjCwg0JDRgdGC0YDQsNGF0LDQvdGB0LrQsNGPINC-0LHQuy4!5e0!3m2!1sru!2sru!4v1635784908541!5m2!1sru!2sru" allowfullscreen="" loading="lazy"></iframe>
+            <div class="circle">
+                <div class="circle-marker">
+                    <div class="circle-marker-point"></div>
+                </div>
+            </div>
+            <div class="map-marker">
+                <i class="fas fa-map-marker-alt"></i>
+            </div>
+        </div>
+        <div class="chat-field" id="chat-field">
+            <div class="send-form">
+                <input type="text" placeholder="Type your message here" id="focus">
+                <button id="send">
+                    <img src="./image/image-send.png" alt="image-send">
+                </button>
+            </div>
+            <div class="msg-my">
+                <span>2021-11-03</span>
+                <span>14:02:23</span>
+                <span>Привет Максим</span>
+            </div>
+            <div class="msg-user">
+                <span>2021-11-03</span>
+                <span>14:02:23</span>
+                <span>Hey how are  today???</span>
+            </div>
+            <div class="msg-my">
+                <span>2021-11-03</span>
+                <span>14:02:23</span>
+                <span>Привет Максим</span>
+            </div>
+            <div class="msg-user">
+                <span>2021-11-03</span>
+                <span>14:02:23</span>
+                <span>Hey how are  today???</span>
+            </div>
+        </div>
+    </section>
+    <div class="loader-container">
+        <div class="modal-window">
+            <div class="logo-image">
+                <img src="./image/logo1.png" alt="logo-1">
+            </div>
+            <div class="logo-title">
+                RoundChat
+            </div>
+            <div class="logo-text">
+                RoundChat is a service that helps you to stay connected with other peers in the area
+            </div>
+            <button class="logo-btn" id="loader">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="btn-text">
+                    Allow location
+                </div>
+            </button>
+        </div>
+    </div>
+    <div class="loader-container-iphone">
+        <div class="box-container">
+            <div class="logo">
+                <img src="./image/logo1.png" alt="logo1">
+            </div>
+            <div class="logo-title">
+                <span>RoundChat</span>
+            </div>
+            <div class="logo-text">
+                <span>RoundChat is a service that helps you to stay connected with other peers in the area</span>
+            </div>
+            <button class="logo-btn" id="loader-iphone">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Allow location</p>
+            </button>
+            <div class="logo-footer">
+                <span>Terms and Conditions</span>
+            </div>
+            <div class="footer"></div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>

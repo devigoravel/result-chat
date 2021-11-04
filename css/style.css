@@ -1,0 +1,760 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Open+Sans:wght@400;700&family=PT+Sans&display=swap');
+
+*{
+    font-family: 'Open Sans';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    background: #E5E5E5;
+    padding: 40px 160px 0 160px;
+}
+
+.main {
+    width: 100%;
+    height: calc(100vh - 60px);
+    /* background: red; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main .map-field {
+    flex: 1 1 60%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.main .map-field iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;    
+}
+
+.main .map-field .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 201px;
+    height: 201px;
+    background: rgba(232, 213, 255, 0.5);
+    border-radius: 50%;
+    border: 4px solid rgba(162, 124, 206, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .map-field .circle .circle-marker {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #5B2995;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .map-field .circle .circle-marker .circle-marker-point {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #F8F1FF;
+}
+
+.main .map-field .map-marker {
+    position: absolute;
+    bottom: 30px;
+    right: 19px;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
+    background: rgba(91, 41, 149, 1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .map-field .map-marker i {
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.main .chat-field {
+    overflow-y: scroll;
+    flex: 1 1 35%;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    padding: 0 25px 80px 25px;
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left: 15px;
+    border-radius: 20px;
+}
+/* form-send start */
+.main .chat-field .send-form {
+    position: absolute;
+    left: 26px;
+    bottom: 20px;
+    margin: 0 auto;
+    width: calc(100% - 54px);
+    padding: 5px 0;
+    border: 1.5px solid rgba(206, 190, 225, 1);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main .chat-field .send-form input {
+    margin-left: 20px;
+    background: none;
+}
+
+.main .chat-field .send-form input::placeholder {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+}
+
+.main .chat-field .send-form button {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background: rgba(91, 41, 149, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.main .chat-field .send-form button img {
+    object-fit: cover;
+}
+/* form-send end*/
+
+/* msg-my start */
+.main .chat-field .msg-my{
+    display: block;
+    float: right;
+    width: auto;
+    max-width: 201px;
+    height: auto;
+    padding: 8px 32px 8px 20px;
+    background: #E8D5FF;
+    margin-top: 10px;
+    border-radius: 20px;
+    border-bottom-right-radius: 0;
+    margin-bottom: 10px;
+    margin-left: auto;
+}
+
+.main .chat-field .msg-my span:nth-child(1) {
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0;
+    color: #3E255C;
+}
+
+
+.main .chat-field .msg-my span:nth-child(2) {
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0;
+    color: #3E255C;
+}
+
+.main .chat-field .msg-my span:nth-child(3) {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0;
+    color: #1E0040;
+}
+
+/* msg-my end */
+
+/* msg-user start */
+.main .chat-field .msg-user{
+    max-width: 244px;
+    width: fit-content;
+    height: auto;
+    padding: 8px 32px 8px 20px;
+    background: #FFECE0;
+    margin-top: 10px;
+    border-radius: 20px;
+    border-bottom-left-radius: 0;
+    margin-bottom: 10px;
+}
+
+.main .chat-field .msg-user span:nth-child(1) {
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0;
+    color: #362D27;
+}
+
+.main .chat-field .msg-user span:nth-child(2) {
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0;
+    color: #362D27;
+}
+
+.main .chat-field .msg-user span:nth-child(3) {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0;
+    color: #362D27;
+}
+
+/* msg-user end */
+/* modal-window start */
+.loader-container-iphone {
+    display: none;
+}
+.modal-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    width: 398px;
+    height: 359px;
+    border-radius: 20px;
+    background: rgba(223, 225, 228, 1);
+    padding: 24px;
+    text-align: center;
+    /* display: flex;
+    justify-content: center; */
+}
+
+.modal-window .logo-image {
+    width: 80px;
+    height: 80px;
+    background: #ED762F;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 6px;
+}
+
+.modal-window .logo-image img {
+    width: 80px;
+    height: 80px;;
+    object-fit: cover;
+}
+
+.modal-window .logo-title {
+    font-family: 'Open', sans-serif;
+    font-size: 48px;
+    line-height: 65px;
+    font-weight: 700;
+    color: rgba(30, 0, 64, 1);
+    margin-bottom: 5px;
+}
+
+.modal-window .logo-text {
+    font-family: 'Open', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgba(30, 0, 64, 1);
+    margin-bottom: 40px;
+}
+
+.modal-window .logo-btn {
+    width: 100%;
+    height: 53px;
+    /* background: rgba(237, 118, 47, 1); */
+    /* background: #ED762F;
+    border-radius: 30px; */
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.modal-window .logo-btn:hover {
+    background: #ED762F;
+    border-radius: 30px;
+
+}
+
+.modal-window .logo-btn span {
+    display: inline-block;
+    position: absolute;
+}
+
+.modal-window .logo-btn:hover span {
+    display: none;
+}
+
+.modal-window .logo-btn span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, transparent, #ED762F);
+    animation: topRun 2s linear infinite forwards;
+}
+
+@keyframes topRun {
+    0% {
+        left: -100%;
+    }
+    50%, 100% {
+        left: 100%;
+    }
+}
+
+.modal-window .logo-btn span:nth-child(2) {
+    right: 0;
+    top: -100%;
+    height: 100%;
+    width: 4px;
+    background: linear-gradient(to bottom, transparent, #ED762F);
+    animation: rightRun 2s linear infinite forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes rightRun {
+    0% {
+        top: -100%;
+    }
+    50%, 100% {
+        top: 100%;
+    }
+}
+
+.modal-window .logo-btn span:nth-child(3) {
+    bottom: 0;
+    left: 100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to left, transparent, #ED762F);
+    animation: bottomRun 2s linear infinite forwards;
+    animation-delay: 1s;
+}
+
+@keyframes bottomRun {
+    0% {
+        left: 100%;
+    }
+    50%, 100% {
+        left: -100%;
+    }
+}
+
+.modal-window .logo-btn span:nth-child(4) {
+    left: 0;
+    top: 100%;
+    height: 100%;
+    width: 4px;
+    background: linear-gradient(to top, transparent, #ED762F);
+    animation: leftRun 2s linear infinite forwards;
+    animation-delay: 1.5s;
+}
+
+@keyframes leftRun {
+    0% {
+        top: 100%;
+    }
+    50%, 100% {
+        top: -100%;
+    }
+}
+
+
+.modal-window .logo-btn i {
+    color: #ED762F;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.modal-window .logo-btn .btn-text {
+    font-family: 'Open', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #ED762F;
+}
+
+.modal-window .logo-btn:hover i {
+    color: #ffffff;
+}
+
+.modal-window .logo-btn:hover .btn-text {
+    color: #ffffff;
+}
+
+/* modal-window end */
+/* loader-container start */
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    /* background-color: #fff; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    height: 100vh;
+    width: 100%;
+    /* position: relative; */
+    background: rgba(17, 17, 17, 0.8);
+}
+
+.loader-container.fade-out {
+    top: -120%;
+}
+
+/* loader-container end */
+
+.loader-container-iphone {
+    display: none;
+}
+
+/* media queries  */
+@media (max-width: 1200px){
+    body {
+        padding: 40px 50px 0 50px;
+    }
+}
+
+@media (max-width: 991px){
+    body {
+        padding: 40px 0px 0 0px;
+    }
+}
+
+@media (max-width: 860px){
+    .main .map-field {
+        flex: 1 1 45%;
+    }
+    .main .chat-field {
+        flex: 1 1 45%;
+    }
+}
+
+@media (max-width: 768px){
+    body {
+        padding: 0px 30px 0 30px;
+    }
+    .main {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .main .map-field {
+        width: 100%;
+    }
+    .main .chat-field {
+        margin: 0;
+        margin-top: 5px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px){
+    body {
+        padding: 0;
+    }
+    .modal-window {
+        width: 80%;
+        height: 359px;
+    }
+    .modal-window .logo-title {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 391px){
+    .main {
+        display: block;
+    }
+    .main .map-field {
+        height: 65vh;
+    }
+    .main .map-field.fa {
+        height: 10%;
+        opacity: 0.4;
+    }
+
+    .main .chat-field {
+        height: 35%;
+    }
+    
+    .main .chat-field.fade {
+        height: 90%;
+    }
+
+    .main .map-field .circle.circle-out {
+        display: none;
+    }
+    
+    .loader-container {
+        display: none;
+    }
+    .loader-container-iphone {
+        display: inline-block;
+    }
+    .loader-container-iphone {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: url(../image/image-bg.jpg) center no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .loader-container-iphone.fade-out {
+        /* top: -120%; */
+        display: none;
+    }
+    
+    .loader-container-iphone .box-container {
+        height: 100%;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: space-around; */
+        position: relative;
+    }
+    
+    .loader-container-iphone .box-container .logo {
+        margin-top: calc(100vh - 72vh);
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: #ED762F;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .loader-container-iphone .box-container .logo-title {
+        margin-top: calc(100vh - 98vh);
+    }
+    
+    .loader-container-iphone .box-container .logo-title span {
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 65px;
+        letter-spacing: -0.03em;
+        color: #FFF2EA;
+    }
+    
+    .loader-container-iphone .box-container .logo-text {
+        text-align: center;
+        margin-top: calc(100vh - 99.4vh);
+    }
+    
+    .loader-container-iphone .box-container .logo-text span {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 150%;
+        color: #FFFfff;
+    }
+    
+    .loader-container-iphone .box-container .logo-btn {
+        width: 100%;
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+        color: #FFFfff;
+        margin-top: calc(100vh - 78vh);
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.3s linear;
+    }
+    
+    .loader-container-iphone .box-container .logo-btn:hover {
+        background: #ED762F;
+        border-radius: 30px;
+    
+    }
+    
+    .loader-container-iphone .box-container .logo-btn span {
+        display: inline-block;
+        position: absolute;
+    }
+    
+    .loader-container-iphone .box-container .logo-btn:hover span {
+        display: none;
+    }
+    
+    .loader-container-iphone .box-container .logo-btn span:nth-child(1) {
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(to right, transparent, #ED762F);
+        animation: topRun 2s linear infinite forwards;
+    }
+    
+    @keyframes topRun {
+        0% {
+            left: -100%;
+        }
+        50%, 100% {
+            left: 100%;
+        }
+    }
+    
+    .loader-container-iphone .box-container .logo-btn span:nth-child(2) {
+        right: 0;
+        top: -100%;
+        height: 100%;
+        width: 4px;
+        background: linear-gradient(to bottom, transparent, #ED762F);
+        animation: rightRun 2s linear infinite forwards;
+        animation-delay: 0.5s;
+    }
+    
+    @keyframes rightRun {
+        0% {
+            top: -100%;
+        }
+        50%, 100% {
+            top: 100%;
+        }
+    }
+    
+    .loader-container-iphone .box-container .logo-btn span:nth-child(3) {
+        bottom: 0;
+        left: 100%;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(to left, transparent, #ED762F);
+        animation: bottomRun 2s linear infinite forwards;
+        animation-delay: 1s;
+    }
+    
+    @keyframes bottomRun {
+        0% {
+            left: 100%;
+        }
+        50%, 100% {
+            left: -100%;
+        }
+    }
+    
+    .loader-container-iphone .box-container .logo-btn span:nth-child(4) {
+        left: 0;
+        top: 100%;
+        height: 100%;
+        width: 4px;
+        background: linear-gradient(to top, transparent, #ED762F);
+        animation: leftRun 2s linear infinite forwards;
+        animation-delay: 1.5s;
+    }
+    
+    @keyframes leftRun {
+        0% {
+            top: 100%;
+        }
+        50%, 100% {
+            top: -100%;
+        }
+    }
+    
+    
+    .loader-container-iphone .box-container .logo-btn i {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 25px;
+        margin-right: 10px;
+    }
+    
+    .loader-container-iphone .box-container .logo-btn p {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 25px;
+    }
+    
+    .loader-container-iphone .box-container .logo-footer {
+        margin-top: calc(100vh - 93vh);
+    }
+    
+    .loader-container-iphone .box-container .logo-footer span {
+        font-family: 'Roboto';
+        color: #FFF2EA;
+        font-size: 14px;
+        line-height: 16px;
+        text-decoration: underline;
+    }
+    
+    .loader-container-iphone .footer {position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translate(-50%);
+        width: 134px;
+        height: 4px;
+        background: #FFFfff;
+        border-radius: 20px;
+    }
+
+}
+@media only screen and (max-height : 800px) {
+    .box-container .logo-btn {
+        margin-top: calc(100vh - 94vh);
+    }
+    .box-container .logo-footer {
+        margin-top: calc(100vh - 97vh);
+    }
+}
+
+@media only screen and (max-height : 600px) {
+    .loader-container-iphone .box-container {
+        justify-content: space-around;
+    }
+    .loader-container-iphone .box-container .logo {
+        margin-top: 0;
+    }
+    .loader-container-iphone .box-container .logo-title {
+        margin-top: 0;
+    }
+    .loader-container-iphone .box-container .logo-btn {
+        margin-top: 0;
+    }
+    .loader-container-iphone .box-container .logo-footer {
+        margin-top: 0;
+    }
+}
