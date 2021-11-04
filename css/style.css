@@ -736,15 +736,31 @@ body {
 
 }
 @media only screen and (max-height : 800px) {
-    .box-container .logo-btn {
-        margin-top: calc(100vh - 94vh);
+
+    .loader-container-iphone .box-container {
+        justify-content: space-around;
     }
-    .box-container .logo-footer {
-        margin-top: calc(100vh - 97vh);
+    .loader-container-iphone .box-container .logo {
+        margin-top: 0;
+    }
+    .loader-container-iphone .box-container .logo-title {
+        margin-top: 0;
+    }
+    .loader-container-iphone .box-container .logo-btn {
+        margin-top: 0;
+    }
+    .loader-container-iphone .box-container .footer {
+        display: none;
     }
 }
 
-@media only screen and (max-height : 600px) {
+/* @media only screen and (max-height : 600px) {
+    .main {
+        height: 100vh;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+    }
     .loader-container-iphone .box-container {
         justify-content: space-around;
     }
@@ -760,4 +776,4 @@ body {
     .loader-container-iphone .box-container .logo-footer {
         margin-top: 0;
     }
-}
+} */
