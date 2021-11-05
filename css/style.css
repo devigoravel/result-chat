@@ -1,5 +1,7 @@
+/* подключение шрифтов */
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Open+Sans:wght@400;700&family=PT+Sans&display=swap');
 
+/* глобальные стили */
 *{
     font-family: 'Open Sans';
     margin: 0;
@@ -23,6 +25,7 @@ body {
     flex-wrap: wrap;
 }
 
+/* стили для секции карты начало*/
 .main .map-field {
     flex: 1 1 60%;
     width: 100%;
@@ -86,57 +89,65 @@ body {
     color: #ffffff;
     font-size: 18px;
 }
+/* стили для секции карты конец*/
 
+/* стили для секции чата начало*/
 .main .chat-field {
-    overflow-y: scroll;
     flex: 1 1 35%;
     width: 100%;
     height: 100%;
     background: #ffffff;
-    padding: 0 25px 80px 25px;
+    padding: 0 25px;
     position: relative;
     display: flex;
     flex-direction: column-reverse;
+    justify-content: flex-start;
     margin-left: 15px;
     border-radius: 20px;
 }
 /* form-send start */
 .main .chat-field .send-form {
     position: absolute;
-    left: 26px;
-    bottom: 20px;
-    margin: 0 auto;
-    width: calc(100% - 54px);
-    padding: 5px 0;
-    border: 1.5px solid rgba(206, 190, 225, 1);
-    border-radius: 30px;
+    right: 50%;
+    transform: translate(50%);
+    bottom: 0;
+    width: calc(100% - 50px);
+    height: auto;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-end;
+    justify-content: space-around;
 }
 
-.main .chat-field .send-form input {
-    margin-left: 20px;
-    background: none;
-}
-
-.main .chat-field .send-form input::placeholder {
-    font-size: 14px;
+.main .chat-field .send-form textarea {
+    max-height: 100px;
+    width: 80%;
+    border: 1.5px solid rgba(206, 190, 225, 1);
+    border-radius: 20px;
+    resize: none;
+    /* font-size: 14px; */
     font-style: normal;
     font-weight: 400;
-    line-height: 19px;
-    letter-spacing: 0em;
+    padding-top: 8px;
+    padding-left: 15px;
+}
+
+.main .chat-field .send-form textarea::placeholder {
+    margin: 0;
+    padding: 0;
+    /* font-size: 14px;
+    font-style: normal;
+    font-weight: 400; */
 }
 
 .main .chat-field .send-form button {
     height: 35px;
     width: 35px;
+    margin-right: 10px;
     border-radius: 50%;
     background: rgba(91, 41, 149, 1);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 10px;
 }
 
 .main .chat-field .send-form button img {
@@ -145,6 +156,17 @@ body {
 /* form-send end*/
 
 /* msg-my start */
+.main .chat-field .message {
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 60px;
+}
+
+.main .chat-field .message.width-up {
+    margin-bottom: 115px;
+}
+
 .main .chat-field .msg-my{
     display: block;
     float: right;
@@ -414,6 +436,8 @@ body {
 /* modal-window end */
 /* loader-container start */
 .loader-container {
+    height: 100vh;
+    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
@@ -422,10 +446,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 100%;
-    height: 100vh;
-    width: 100%;
     /* position: relative; */
     background: rgba(17, 17, 17, 0.8);
 }
@@ -466,11 +486,12 @@ body {
     body {
         padding: 0px 30px 0 30px;
     }
+
     .main {
         width: 100%;
         height: 100vh;
-        display: flex;
-        flex-direction: column;
+        /* display: flex;
+        flex-direction: column; */
     }
     .main .map-field {
         width: 100%;
@@ -480,6 +501,7 @@ body {
         margin-top: 5px;
         width: 100%;
     }
+
 }
 
 @media (max-width: 450px){
@@ -493,6 +515,22 @@ body {
     .modal-window .logo-title {
         font-size: 30px;
     }
+    .main {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main .map-field {
+        height: 65vh;
+    }
+
+    .main .chat-field {
+        height: 35vh;
+    }
+    
+
 }
 
 @media (max-width: 391px){
